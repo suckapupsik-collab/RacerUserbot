@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0a0b10">
+  <meta name="description" content="RacerUserbot — поиск и организация идей для Telegram-юзернеймов.">
+  <title>RacerUserbot — Username Finder</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="glow glow-a"></div><div class="glow glow-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">R</span><span>Racer<span class="accent">Userbot</span></span></a>
+    <nav><a href="#finder">Поиск</a><a href="#how">Как работает</a><a href="#bot">Telegram-бот</a></nav>
+    <a class="top-cta" href="#finder">Начать поиск <span>↗</span></a>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="pulse"></span> TELEGRAM USERNAME TOOLKIT</div>
+      <h1>Найди имя.<br><span class="gradient">Задай стиль.</span></h1>
+      <p class="hero-copy">Генерируй идеи для Telegram-юзернеймов, проверяй варианты и сохраняй подходящие имена в одном месте.</p>
+      <div class="hero-actions"><a class="primary-btn" href="#finder">Открыть поиск <span>→</span></a><a class="quiet-link" href="#how">Как это работает</a></div>
+      <div class="trust-row"><span>✦ Генератор вариантов</span><span>✦ История поиска</span><span>✦ Telegram-бот</span></div>
+    </section>
+    <section id="finder" class="finder panel">
+      <div class="section-head"><div><div class="eyebrow">USERNAME EXPLORER</div><h2>Поиск юзернеймов</h2></div><span class="live-pill"><span class="pulse"></span> READY</span></div>
+      <form id="searchForm">
+        <label for="query">Имя или ключевое слово</label>
+        <div class="search-line"><span class="at">@</span><input id="query" placeholder="например, racer" maxlength="24" autocomplete="off"><button class="primary-btn" type="submit">Сгенерировать <span>↗</span></button></div>
+        <div class="filters">
+          <div><label for="length">Длина</label><select id="length"><option value="any">Любая</option><option value="5">5+ символов</option><option value="8">8+ символов</option><option value="12">12+ символов</option></select></div>
+          <div><label for="style">Стиль</label><select id="style"><option value="mixed">Смешанный</option><option value="clean">Минималистичный</option><option value="bot">С окончанием _bot</option><option value="x">С x / цифрами</option></select></div>
+          <div><label for="count">Количество</label><select id="count"><option>10</option><option>20</option><option>30</option></select></div>
+        </div>
+      </form>
+      <div class="results-head"><div><h3>Результаты</h3><span id="resultCount" class="muted">Сгенерируй варианты, чтобы начать</span></div><button id="copyAll" class="secondary-btn" type="button">Копировать список</button></div>
+      <div id="results" class="results-empty"><div class="empty-icon">⌕</div><strong>Твои идеи появятся здесь</strong><span>Статусы доступности не будут выдумываться.</span></div>
+      <p class="notice">ⓘ Telegram не предоставляет универсальную публичную проверку произвольных имён. В демо-режиме показываются идеи, а статус доступности обозначен как «не проверено».</p>
+    </section>
+    <section id="how" class="features">
+      <div class="section-title"><div class="eyebrow">MADE FOR TELEGRAM</div><h2>Всё для поиска имени</h2></div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-icon">⌘</span><h3>Генератор имён</h3><p>Создавай варианты по ключевому слову, длине и стилю.</p></article>
+        <article class="feature-card"><span class="feature-icon">◷</span><h3>Понятные статусы</h3><p>Отделяем подтверждённый результат от неизвестного статуса.</p></article>
+        <article class="feature-card"><span class="feature-icon">↗</span><h3>Сайт + бот</h3><p>Одна концепция для веб-поиска и Telegram-команд.</p></article>
+      </div>
+    </section>
+    <section id="bot" class="bot-banner"><div><div class="eyebrow">YOUR TELEGRAM ASSISTANT</div><h2>RacerUserbot — всегда под рукой</h2><p>Используй бота для генерации идей и сохранения поисковых запросов.</p></div><div class="bot-symbol">R<span>↗</span></div></section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">R</span><span>Racer<span class="accent">Userbot</span></span></a><span>© 2026 RacerUserbot · Username toolkit</span><a href="#finder">Наверх ↑</a></footer>
+  <script src="./app.js"></script>
+</body></html>
