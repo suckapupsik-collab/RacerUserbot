@@ -1,52 +1,8 @@
 <!doctype html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0a0b10">
-  <meta name="description" content="RacerUserbot — поиск и организация идей для Telegram-юзернеймов.">
-  <title>RacerUserbot — Username Finder</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <div class="glow glow-a"></div><div class="glow glow-b"></div>
-  <header class="topbar">
-    <a class="brand" href="#"><span class="brand-mark">R</span><span>Racer<span class="accent">Userbot</span></span></a>
-    <nav><a href="#finder">Поиск</a><a href="#how">Как работает</a><a href="#bot">Telegram-бот</a></nav>
-    <a class="top-cta" href="#finder">Начать поиск <span>↗</span></a>
-  </header>
-  <main>
-    <section class="hero">
-      <div class="eyebrow"><span class="pulse"></span> TELEGRAM USERNAME TOOLKIT</div>
-      <h1>Найди имя.<br><span class="gradient">Задай стиль.</span></h1>
-      <p class="hero-copy">Генерируй идеи для Telegram-юзернеймов, проверяй варианты и сохраняй подходящие имена в одном месте.</p>
-      <div class="hero-actions"><a class="primary-btn" href="#finder">Открыть поиск <span>→</span></a><a class="quiet-link" href="#how">Как это работает</a></div>
-      <div class="trust-row"><span>✦ Генератор вариантов</span><span>✦ История поиска</span><span>✦ Telegram-бот</span></div>
-    </section>
-    <section id="finder" class="finder panel">
-      <div class="section-head"><div><div class="eyebrow">USERNAME EXPLORER</div><h2>Поиск юзернеймов</h2></div><span class="live-pill"><span class="pulse"></span> READY</span></div>
-      <form id="searchForm">
-        <label for="query">Имя или ключевое слово</label>
-        <div class="search-line"><span class="at">@</span><input id="query" placeholder="например, racer" maxlength="24" autocomplete="off"><button class="primary-btn" type="submit">Сгенерировать <span>↗</span></button></div>
-        <div class="filters">
-          <div><label for="length">Длина</label><select id="length"><option value="any">Любая</option><option value="5">5+ символов</option><option value="8">8+ символов</option><option value="12">12+ символов</option></select></div>
-          <div><label for="style">Стиль</label><select id="style"><option value="mixed">Смешанный</option><option value="clean">Минималистичный</option><option value="bot">С окончанием _bot</option><option value="x">С x / цифрами</option></select></div>
-          <div><label for="count">Количество</label><select id="count"><option>10</option><option>20</option><option>30</option></select></div>
-        </div>
-      </form>
-      <div class="results-head"><div><h3>Результаты</h3><span id="resultCount" class="muted">Сгенерируй варианты, чтобы начать</span></div><button id="copyAll" class="secondary-btn" type="button">Копировать список</button></div>
-      <div id="results" class="results-empty"><div class="empty-icon">⌕</div><strong>Твои идеи появятся здесь</strong><span>Статусы доступности не будут выдумываться.</span></div>
-      <p class="notice">ⓘ Telegram не предоставляет универсальную публичную проверку произвольных имён. В демо-режиме показываются идеи, а статус доступности обозначен как «не проверено».</p>
-    </section>
-    <section id="how" class="features">
-      <div class="section-title"><div class="eyebrow">MADE FOR TELEGRAM</div><h2>Всё для поиска имени</h2></div>
-      <div class="feature-grid">
-        <article class="feature-card"><span class="feature-icon">⌘</span><h3>Генератор имён</h3><p>Создавай варианты по ключевому слову, длине и стилю.</p></article>
-        <article class="feature-card"><span class="feature-icon">◷</span><h3>Понятные статусы</h3><p>Отделяем подтверждённый результат от неизвестного статуса.</p></article>
-        <article class="feature-card"><span class="feature-icon">↗</span><h3>Сайт + бот</h3><p>Одна концепция для веб-поиска и Telegram-команд.</p></article>
-      </div>
-    </section>
-    <section id="bot" class="bot-banner"><div><div class="eyebrow">YOUR TELEGRAM ASSISTANT</div><h2>RacerUserbot — всегда под рукой</h2><p>Используй бота для генерации идей и сохранения поисковых запросов.</p></div><div class="bot-symbol">R<span>↗</span></div></section>
-  </main>
-  <footer><a class="brand" href="#"><span class="brand-mark">R</span><span>Racer<span class="accent">Userbot</span></span></a><span>© 2026 RacerUserbot · Username toolkit</span><a href="#finder">Наверх ↑</a></footer>
-  <script src="./app.js"></script>
-</body></html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b0f17"><meta name="description" content="RacerUserbot — поиск и проверка Telegram-юзернеймов"><title>RacerUserbot — поиск юзернеймов</title><link rel="stylesheet" href="./style.css"><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script defer src="./app.js"></script></head>
+<body><div class="shell"><header class="topbar"><a class="brand" href="./"><span class="brand-mark">R</span>Racer<span class="muted">Userbot</span></a><nav><a href="#search">Поиск</a><a href="#account">Аккаунт</a><a href="#admin" id="admin-nav" hidden>Админ-панель</a></nav><button class="button quiet" id="login-top">Войти</button></header>
+<main><section class="hero"><p class="eyebrow">TELEGRAM USERNAME SEARCH</p><h1>Найди <span class="gradient">свободный юзернейм</span></h1><p class="hero-copy">Проверяй конкретные имена — никакой генерации случайных ников. Неоднозначные результаты не выдаются за достоверные.</p></section>
+<section class="panel" id="search"><div class="section-heading"><div><p class="eyebrow">ПОИСК</p><h2>Проверить юзернейм</h2></div><span class="chip">Telegram</span></div><form id="search-form"><label for="username">Имя пользователя или список имён</label><div class="search-row"><span class="at">@</span><input id="username" placeholder="username или username1, username2" maxlength="1000" required><button class="button primary" id="search-button">Проверить</button></div><p class="hint">До 20 имён за один запрос. Разделяй запятой, пробелом или новой строкой.</p></form><div class="results-head"><h3>Результаты</h3><span id="result-count" class="muted">Пока нет проверок</span></div><div id="results" class="results empty"><div class="empty-icon">⌕</div><p>Введи юзернеймы, которые хочешь проверить.</p></div><p class="notice"><b>Важно:</b> Telegram не предоставляет публичный официальный API для проверки любого username. Результат по публичной странице предварительный; перед использованием перепроверь имя в Telegram.</p></section>
+<div class="two-col"><section class="panel" id="account"><p class="eyebrow">ЛИЧНЫЙ КАБИНЕТ</p><h2>Твой аккаунт</h2><p class="muted">Войди через Google, чтобы сохранять историю и привязать Telegram.</p><div id="auth-state" class="auth-state"><span class="avatar">?</span><div><b>Ты не вошёл</b><p>Войди, чтобы открыть личный кабинет.</p></div></div><button class="button primary wide" id="login-google"><span class="google-g">G</span> Продолжить с Google</button><button class="button quiet wide" id="logout" hidden>Выйти</button><div id="account-actions" hidden><button class="button secondary wide" id="link-telegram">Привязать Telegram</button><p id="telegram-state" class="hint">Telegram не привязан.</p><div id="history" class="history"></div></div></section>
+<section class="panel"><p class="eyebrow">КАК ЭТО РАБОТАЕТ</p><h2>Без фальшивых статусов</h2><ul class="feature-list"><li><span>⌕</span><div><b>Поиск конкретных имён</b><p>Введи username, который хочешь проверить.</p></div></li><li><span>✓</span><div><b>Осторожная проверка</b><p>Неоднозначные ответы отмечаются как неизвестные.</p></div></li><li><span>↗</span><div><b>Связь с Telegram</b><p>Привязка завершается подтверждением через бота.</p></div></li></ul></section></div>
+<section class="panel admin-panel" id="admin" hidden><div class="section-heading"><div><p class="eyebrow">УПРАВЛЕНИЕ</p><h2>Админ-панель</h2></div><span class="chip">Основатель</span></div><p class="muted">Основатель: suckapupsik@gmail.com. Доступ определяется ролью в базе, а не текстом на странице.</p><div class="admin-grid"><div class="stat"><span>Пользователи</span><b id="stat-users">—</b></div><div class="stat"><span>Поиски</span><b id="stat-searches">—</b></div><div class="stat"><span>Привязки Telegram</span><b id="stat-telegram">—</b></div></div><div class="table-wrap"><table><thead><tr><th>Email</th><th>Роль</th><th>Telegram</th><th>Создан</th></tr></thead><tbody id="admin-users"><tr><td colspan="4">Войди как основатель, чтобы увидеть данные.</td></tr></tbody></table></div></section><div id="toast" class="toast" role="status"></div></main><footer><span>© <span id="year"></span> RacerUserbot</span><span>Проверяй имя перед использованием.</span></footer></div></body></html>
